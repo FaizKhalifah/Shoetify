@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "server.Controllers.FactoriesController",
+    "Method": "GetAllFactories",
+    "RelativePath": "api/Factories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.FactoriesController",
+    "Method": "AddFactory",
+    "RelativePath": "api/Factories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addFactoryDTO",
+        "Type": "server.Models.AddFactoryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "server.Controllers.ShoesController",
     "Method": "GetAllShoes",
     "RelativePath": "api/Shoes",
@@ -7,6 +33,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ShoesController",
+    "Method": "AddShoe",
+    "RelativePath": "api/Shoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addShoeDTO",
+        "Type": "server.Models.AddShoeDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

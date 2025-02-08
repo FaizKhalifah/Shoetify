@@ -21,7 +21,7 @@ namespace server.Controllers
         public IActionResult GetAllShoes()
         {
            var shoes =  _context.Shoes.ToList();
-            return Ok(shoes);
+           return Ok(shoes);
         }
 
         [HttpPost]
