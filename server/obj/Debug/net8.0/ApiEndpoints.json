@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "server.Controllers.ShoesController",
+    "Method": "GetAllShoes",
+    "RelativePath": "api/Shoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "server.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
