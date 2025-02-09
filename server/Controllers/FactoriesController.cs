@@ -72,5 +72,27 @@ namespace server.Controllers
             }
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult deleteFactory(Guid id)
+        {
+            try
+            {
+                var factory = _context.Factories.Include(f => f.Shoes).FirstOrDefault(f => f.Id == id);
+                if (factory == null)
+                {
+                    return NotFound(new {message="factory not found"} );
+                }
+                _context.Shoes.RemoveRange(factory.Shoes);
+                _context.Factories.Remove(factory);
+                _context.SaveChanges();
+
+                return Ok("Factory " + factory.Name + " deleted");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
+
     }
 }

@@ -60,5 +60,51 @@ namespace server.Controllers
             }
 
         }
+
+        [HttpPut("{id}")]
+        public IActionResult updateShoe(Guid id, [FromBody] UpdateShoeDTO updateShoeDTO)
+        {
+            try
+            {
+                var shoe = _context.Shoes.Find(id);
+                if (shoe == null)
+                {
+                    return NotFound(new { message = "shoe not found" });
+                }
+                shoe.Name = updateShoeDTO.Name;
+                shoe.Description = updateShoeDTO.Description;
+                shoe.Size = updateShoeDTO.Size;
+                shoe.Brand = updateShoeDTO.Brand;
+                shoe.FactoryId = updateShoeDTO.FactoryId;
+
+                _context.SaveChanges();
+                return Ok(shoe.Name + "updated");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult deleteShoe(Guid id)
+        {
+            try
+            {
+                var shoe = _context.Shoes.Find(id);
+                if (shoe == null)
+                {
+                    return NotFound(new { message = "shoe not found" });
+                }
+                _context.Shoes.Remove(shoe);
+                _context.SaveChanges();
+                return Ok(new { message = "Shoe deleted successfully" });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
     }
 }
