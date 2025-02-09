@@ -26,6 +26,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "server.Controllers.FactoriesController",
+    "Method": "updateFactory",
+    "RelativePath": "api/Factories/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateFactoryDTO",
+        "Type": "server.Models.UpdateFactoryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.FactoriesController",
+    "Method": "deleteFactory",
+    "RelativePath": "api/Factories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "server.Controllers.ShoesController",
     "Method": "GetAllShoes",
     "RelativePath": "api/Shoes",
@@ -46,6 +83,43 @@
       {
         "Name": "addShoeDTO",
         "Type": "server.Models.AddShoeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ShoesController",
+    "Method": "updateShoe",
+    "RelativePath": "api/Shoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateShoeDTO",
+        "Type": "server.Models.UpdateShoeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ShoesController",
+    "Method": "deleteShoe",
+    "RelativePath": "api/Shoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
