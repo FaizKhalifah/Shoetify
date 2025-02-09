@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using server.Data;
 using server.Models;
 using server.Models.Entities;
@@ -19,7 +20,10 @@ namespace server.Controllers
         [HttpGet]
         public IActionResult GetAllFactories()
         {
-            var factories = _context.Factories.ToList();
+            var factories = _context.Factories
+            .Include(f => f.Shoes) 
+            .ToList();
+
             return Ok(factories);
         }
 
@@ -39,6 +43,28 @@ namespace server.Controllers
                 _context.SaveChanges();
 
                 return CreatedAtAction(nameof(GetAllFactories), new { id = newFactory.Id }, newFactory);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult updateFactory(Guid id, [FromBody] UpdateFactoryDTO updateFactoryDTO)
+        {
+            try
+            {
+                var factory = _context.Factories.Find(id);
+                if (factory == null)
+                {
+                    return StatusCode(400, new { message = $"Factory not existed" });
+                }
+                factory.Name = updateFactoryDTO.Name;
+                factory.Location = updateFactoryDTO.Location;
+
+                _context.SaveChanges();
+                return Ok(factory);
             }
             catch (Exception ex)
             {
