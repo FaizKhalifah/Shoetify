@@ -28,7 +28,6 @@ D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\staticwebassets\msbuild.bu
 D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.server.props
 D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.server.props
 D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\server.csproj.Up2Date
 D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\server.dll
 D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\refint\server.dll
@@ -137,3 +136,14 @@ D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.
 D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Projekan\Personal\Shoetify\server\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projekan\Personal\Shoetify\server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
