@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using server.Data;
@@ -9,6 +11,7 @@ namespace server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class FactoriesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -20,6 +23,16 @@ namespace server.Controllers
         [HttpGet]
         public IActionResult GetAllFactories()
         {
+            var user = HttpContext.User;
+            Console.WriteLine($"User authenticated: {user.Identity?.IsAuthenticated}");
+            Console.WriteLine($"User role: {user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value}");
+
+            if (!user.Identity.IsAuthenticated)
+            {
+                return Unauthorized(new { message = "You are not authenticated" });
+            }
+
+
             var factories = _context.Factories
             .Include(f => f.Shoes) 
             .ToList();
