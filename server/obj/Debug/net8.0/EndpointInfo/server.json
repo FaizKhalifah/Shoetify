@@ -109,6 +109,27 @@
       }
     },
     "/api/Factories/{id}": {
+      "get": {
+        "tags": [
+          "Factories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "put": {
         "tags": [
           "Factories"
@@ -213,6 +234,27 @@
       }
     },
     "/api/Shoes/{id}": {
+      "get": {
+        "tags": [
+          "Shoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "put": {
         "tags": [
           "Shoes"

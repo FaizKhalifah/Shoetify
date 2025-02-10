@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "server.Controllers.FactoriesController",
+    "Method": "GetFactoryById",
+    "RelativePath": "api/Factories/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.FactoriesController",
     "Method": "updateFactory",
     "RelativePath": "api/Factories/{id}",
     "HttpMethod": "PUT",
@@ -115,6 +131,22 @@
       {
         "Name": "addShoeDTO",
         "Type": "server.Models.AddShoeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ShoesController",
+    "Method": "GetShoeById",
+    "RelativePath": "api/Shoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
