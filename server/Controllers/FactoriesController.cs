@@ -40,6 +40,25 @@ namespace server.Controllers
             return Ok(factories);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetFactoryById(Guid id)
+        {
+            try
+            {
+                var factory = _context.Factories.Include(f => f.Shoes).FirstOrDefault(f=>f.Id==id);
+                if (factory == null)
+                {
+                    return NotFound(new { message = "factory not found" });
+                }
+                return Ok(factory);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+           
+        }
+
         [HttpPost]
         public IActionResult AddFactory(AddFactoryDTO addFactoryDTO)
         {

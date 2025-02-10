@@ -26,6 +26,25 @@ namespace server.Controllers
             return Ok(shoes);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetShoeById(Guid id)
+        {
+            try
+            {
+
+                var shoe = _context.Shoes.Find(id);
+                if (shoe == null)
+                {
+                    return BadRequest(new { message = "Shoe ID not found" });
+                }
+                return Ok(shoe);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
+
         [HttpPost]
         public IActionResult AddShoe(AddShoeDTO addShoeDTO)
         {
